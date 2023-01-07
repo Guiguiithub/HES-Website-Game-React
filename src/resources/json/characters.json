@@ -1,0 +1,29 @@
+{
+    "Captain":
+    [
+        {
+            "name": "GuiGui",
+            "spaceShip":"resources/images/game_image/spaceship_image/ship1.png", 
+            "head":"resources/images/game_image/spaceship_image/captainGuiGui.png",
+            "lore":"Coming from another world, his purpose was to save the world. On his quest, he found out about japanese culture. He lost track of his goal and started to seek for waifus. He heard of another living form in space and wanted to seek waifus from other planets."
+        },
+        {
+            "name": "Gianou",
+            "spaceShip":"resources/images/game_image/spaceship_image/ship2.png", 
+            "head":"resources/images/game_image/spaceship_image/captainGianad.png",
+            "lore":"Young man who couldn't find a job and was force to accept a job as a captain in the new war between world. If he hadn't, he would not have been eligible for unemployment benefits anymore"
+        },
+        {
+            "name": "Antho",
+            "spaceShip":"resources/images/game_image/spaceship_image/ship3.png", 
+            "head":"resources/images/game_image/spaceship_image/captainAntho.png",
+            "lore":"Antho le scrumMaster"
+        },
+        {
+            "name": "Bast",
+            "spaceShip":"resources/images/game_image/spaceship_image/ship4.png", 
+            "head":"resources/images/game_image/spaceship_image/captainBast.png",
+            "lore":"A very unpolite mercernary who is here only for the money. He doesn't care about saving the Earth from total destruction as much as getting rich. Loyal to no one but himself, he'll do whatever it takes to complete a job, blind to the consequences."
+        }
+    ]
+}

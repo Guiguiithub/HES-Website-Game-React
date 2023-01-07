@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700|Roboto+Slab:700");
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmbGRjRdE.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  /*border: 2px solid black;*/
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+html {
+  background-color: #d3d3d3;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  max-width: 1240px;
+  margin: auto;
+  box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35);
+}
+
+header h1 {
+  padding: 1vw;
+  padding-top: 4vw;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(#f4b89b, #dd4e22);
+}
+
+nav {
+  justify-content: center;
+}
+
+#hamburger, label /*Hides burger in Desktop version*/ {
+  display: none;
+}
+
+header ul /*Navigation list*/ {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #464646;
+  padding-left: 5vw; /*Pour faire le carré déguelasse à gauche là*/
+}
+header li /*Removes list's dot*/ {
+  list-style-type: none;
+}
+
+header li a /*Make whole block act as clickable link*/ {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  padding: 1vw;
+  background-color: #464646;
+  text-decoration: none;
+  color: white;
+}
+
+header li a:hover /*Highlights list elements when hovered*/ {
+  background-color: #606060;
+}
+
+.active a /*Change colors of the current page's link to indicate what page is currently displayed*/ {
+  background-color: white !important;
+  color: #dd4f25 !important;
+}
+
+main {
+  display: flex;
+  background-color: white;
+  margin: 2vw;
+  border: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+section {
+  background-color: white;
+  padding-bottom: 1vw;
+}
+
+.logbook {
+  min-width: 100%;
+}
+
+section article {
+  margin-bottom: 2.5em;
+}
+
+section#articles article:first-child {
+  margin-bottom: 0;
+}
+
+section article summary {
+  display:block;
+  cursor: pointer;
+}
+
+section article ul {
+  margin-left: 2em;
+}
+
+section article header p {
+  margin-bottom: 0;
+}
+
+section article p {
+  margin-bottom: 1em;
+}
+
+section header {
+  padding-bottom: 1.5vw;
+}
+
+section header h2,
+section header h3 {
+  border-bottom: 1px solid #b2b2b2;
+}
+
+section header.first_header h2 {
+  border: none;
+}
+
+section header p {
+  font-style: italic;
+  color: #b2b2b2;
+  text-align: end;
+}
+#articles figure {
+  width: 100%;
+  margin: 1vw;
+}
+#articles figure.Mockup {
+  width: 60%;
+}
+h4 {
+  margin-bottom: 1vw;
+}
+.logImg {
+  float: right;
+  width: 30%;
+  margin-right: 1vw;
+}
+.clear {
+  clear: both;
+}
+aside {
+  background-color: transparent;
+
+  width: 60vw;
+  height: max-content;
+  margin-left: 4vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+aside h3 {
+  padding-bottom: 1vw;
+  color: white;
+  background-color: #dd4e22;
+  padding: 1vw;
+}
+
+aside ul {
+  padding: 1vw;
+  padding-left: 1.5vw;
+  list-style: none;
+}
+aside li {
+  padding: 0.6vw;
+}
+
+a {
+  text-decoration: none;
+  color: #dd4f25;
+}
+
+#GameContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+#gameCanvas {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 2%;
+}
+
+#startButton {
+  background-color: green;
+  width: auto;
+  padding: 1em;
+  margin: 1em;
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #464646;
+  margin-top: auto; /*Keeps footer at the bottom*/
+  /*Might be better to use the seen in class method but that means Header and Footer would have an absolute size instead of relative??*/
+  padding: 1vw;
+}
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700|Roboto+Slab:700");
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmbGRjRdE.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  /*border: 2px solid black;*/
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  background-color: #d3d3d3;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  max-width: 1240px;
+  margin: auto;
+  box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35);
+}
+
+header h1 {
+  padding: 1vw;
+  padding-top: 4vw;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(#f4b89b, #dd4e22);
+}
+
+nav {
+  justify-content: center;
+}
+
+#hamburger, label /*Hides burger in Desktop version*/ {
+  display: none;
+}
+
+header ul /*Navigation list*/ {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #464646;
+  padding-left: 5vw; /*Pour faire le carré déguelasse à gauche là*/
+}
+header li /*Removes list's dot*/ {
+  list-style-type: none;
+}
+
+header li a /*Make whole block act as clickable link*/ {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  padding: 1vw;
+  background-color: #464646;
+  text-decoration: none;
+  color: white;
+}
+
+header li a:hover /*Highlights list elements when hovered*/ {
+  background-color: #606060;
+}
+
+.active a /*Change colors of the current page's link to indicate what page is currently displayed*/ {
+  background-color: white !important;
+  color: #dd4f25 !important;
+}
+
+main {
+  display: flex;
+  background-color: white;
+  margin: 2vw;
+  border: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+section {
+  background-color: white;
+  padding-bottom: 1vw;
+}
+
+section article {
+  margin-bottom: 2.5em;
+}
+
+section#articles article:first-child {
+  margin-bottom: 0;
+}
+
+section article ul {
+  margin-left: 2em;
+}
+
+section article header p {
+  margin-bottom: 0;
+}
+
+section article p {
+  margin-bottom: 1em;
+}
+
+section header {
+  padding-bottom: 1.5vw;
+}
+
+section header h2,
+section header h3 {
+  border-bottom: 1px solid #b2b2b2;
+}
+
+section header.first_header h2 {
+  border: none;
+}
+
+section header p {
+  font-style: italic;
+  color: #b2b2b2;
+  text-align: end;
+}
+#articles figure {
+  width: 100%;
+  margin: 1vw;
+}
+#articles figcaption.Mockup {
+  width: 60%;
+}
+h4 {
+  margin-bottom: 1vw;
+}
+.logImg {
+  float: right;
+  width: 30%;
+  margin-right: 1vw;
+}
+.clear {
+  clear: both;
+}
+aside {
+  background-color: transparent;
+
+  width: 60vw;
+  height: max-content;
+  margin-left: 4vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+aside h3 {
+  padding-bottom: 1vw;
+  color: white;
+  background-color: #dd4e22;
+  padding: 1vw;
+}
+
+aside ul {
+  padding: 1vw;
+  padding-left: 1.5vw;
+  list-style: none;
+}
+aside li {
+  padding: 0.6vw;
+}
+
+a {
+  text-decoration: none;
+  color: #dd4f25;
+}
+
+#GameContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+#gameCanvas {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 2%;
+}
+
+#startButton {
+  background-color: green;
+  width: auto;
+  padding: 1em;
+  margin: 1em;
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #464646;
+  margin-top: auto; /*Keeps footer at the bottom*/
+  /*Might be better to use the seen in class method but that means Header and Footer would have an absolute size instead of relative??*/
+  padding: 1vw;
+}

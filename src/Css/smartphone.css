@@ -1,0 +1,59 @@
+@media screen and (max-width:700px) {
+    
+    label{ /*Label is the image used for the hamburger input checkbox
+                It is hidden in the desktop version and is set visible here*/
+        display: flex;
+        background-color: transparent; 
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav { /*To display burger and center it
+            Also change nav bar direction*/
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background-color: #464646;
+    }
+
+    input~ ul li{ /*Hides navigation list*/
+        display: flex;
+        height: 0;
+        padding: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        visibility: hidden; 
+     }
+ 
+     
+     nav input:checked~ ul li { /*Displays navigation list*/
+         display: flex;
+         height: 2em;
+         background-color: white;
+         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+         visibility: visible;
+     }
+   
+    input[type="checkbox"] { /*Hides the checkbox*/
+        display: none;
+    }
+    
+    a{ /*Navigation elements have screen width*/
+        width: 100%;
+    }
+    li{ /*Navigation elements have screen width*/
+        width: 100%;
+    }
+
+    header ul{
+            padding-left: 0;
+        }
+
+    main{
+        flex-direction: column;
+    }
+    aside{
+        margin-top: 2vh;
+    }
+    
+
+}
