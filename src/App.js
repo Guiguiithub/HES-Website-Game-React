@@ -15,8 +15,17 @@ import {
     Link
 } from "react-router-dom" ;
 
+const loadPlayer = async({imageID},{ signal }) => {
+    const res = await fetch(`https://dev-nsegame.pantheonsite.io/wp-json/wp/v2/media/${imageID}`, { signal })
+    if (!res.ok) throw new Error(res.statusText)
+    return res.json()
+}
+
 export default function PageAndling() {
+    
   return (
+    <html>
+
     <Router>
         <div>
         <header>
@@ -56,13 +65,11 @@ export default function PageAndling() {
                 <Routes>
                     <Route path="/logbook" element={<Logbook/>}></Route>
                 </Routes>
-                <Routes>
-                    <Route path="/game" element={<Game/>}></Route>
-                </Routes>
             <footer>
                 <img id="logo" src="logo.png"></img>
             </footer>
         </div>
     </Router>
+    </html>
   )
 }
