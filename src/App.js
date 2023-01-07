@@ -56,9 +56,6 @@ export default function PageAndling() {
                 <Routes>
                     <Route path="/logbook" element={<Logbook/>}></Route>
                 </Routes>
-                <Routes>
-                    <Route path="/game" element={<Game/>}></Route>
-                </Routes>
             <footer>
                 <img id="logo" src="logo.png"></img>
             </footer>
