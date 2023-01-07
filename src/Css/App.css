@@ -19,6 +19,16 @@
     U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://fonts.googleapis.com/css?family=Orbitron) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
 h1,
 h2,
 h3,
@@ -26,6 +36,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto Slab", sans-serif;
+  color: white;
 }
 
 * {
@@ -38,11 +49,14 @@ h6 {
 }
 
 html {
-  background-color: #d3d3d3;
+  /*background-image: url("../images/background.png");*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body {
-  background-color: white;
+  background-color: #404040;
   display: flex;
   align-self: center;
   flex-direction: column;
@@ -54,11 +68,13 @@ body {
 }
 
 header h1 {
-  padding: 1vw;
-  padding-top: 4vw;
+  font-family: "Orbitron";
+  color: orange;
+  padding: 2vw;
   text-align: center;
-  color: white;
-  background-image: linear-gradient(#f4b89b, #dd4e22);
+  color: #f9c22f;
+  background-color: #262626;
+  font-size: 4em;
 }
 
 nav {
@@ -75,7 +91,7 @@ header ul /*Navigation list*/ {
   justify-content: start;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: #464646;
+  background-color: #262626;
   padding-left: 5vw; /*Pour faire le carré déguelasse à gauche là*/
 }
 header li /*Removes list's dot*/ {
@@ -87,23 +103,23 @@ header li a /*Make whole block act as clickable link*/ {
   text-align: center;
   font-weight: bold;
   padding: 1vw;
-  background-color: #464646;
+  background-color: #262626;
   text-decoration: none;
   color: white;
 }
 
 header li a:hover /*Highlights list elements when hovered*/ {
   background-color: #606060;
+  color: white;
 }
 
 .active a /*Change colors of the current page's link to indicate what page is currently displayed*/ {
-  background-color: white !important;
-  color: #dd4f25 !important;
+  background-color: #404040 !important;
 }
 
 main {
   display: flex;
-  background-color: white;
+  background-color: #404040;
   margin: 2vw;
   border: 0;
   padding: 0;
@@ -111,7 +127,7 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: #404040;
   padding-bottom: 1vw;
 }
 
@@ -127,13 +143,25 @@ section#articles article:first-child {
   margin-bottom: 0;
 }
 
+details {
+  padding: 0 1rem;
+  border-radius: 6px;
+  background-color: #262626;
+  color: #263238;
+}
+
 section article summary {
-  display:block;
+  padding: 1rem 2em 1rem 0;
+  display: block;
+  position: relative;
+  font-size: 1.33em;
+  font-weight: bold;
   cursor: pointer;
 }
 
 section article ul {
   margin-left: 2em;
+  color: white;
 }
 
 section article header p {
@@ -150,7 +178,7 @@ section header {
 
 section header h2,
 section header h3 {
-  border-bottom: 1px solid #b2b2b2;
+  border-bottom: 1px solid #777;
 }
 
 section header.first_header h2 {
@@ -159,17 +187,18 @@ section header.first_header h2 {
 
 section header p {
   font-style: italic;
-  color: #b2b2b2;
+  color: #777;
   text-align: end;
 }
-#articles figure {
+#articles img {
   width: 100%;
   margin: 1vw;
 }
-#articles figure.Mockup {
+#articles img.Mockup {
   width: 60%;
 }
 h4 {
+  color: white;
   margin-bottom: 1vw;
 }
 .logImg {
@@ -192,7 +221,7 @@ aside {
 aside h3 {
   padding-bottom: 1vw;
   color: white;
-  background-color: #dd4e22;
+  background-color: #262626;
   padding: 1vw;
 }
 
@@ -204,10 +233,19 @@ aside ul {
 aside li {
   padding: 0.6vw;
 }
-
+a:hover {
+  color: rgb(0, 188, 188);
+}
+a:active {
+  color: cyan;
+}
 a {
   text-decoration: none;
-  color: #dd4f25;
+  color: cyan;
+}
+
+p {
+  color: white;
 }
 
 #GameContainer {
@@ -234,240 +272,235 @@ a {
 footer {
   display: flex;
   justify-content: center;
-  background-color: #464646;
+  background-color: #262626;
   margin-top: auto; /*Keeps footer at the bottom*/
   /*Might be better to use the seen in class method but that means Header and Footer would have an absolute size instead of relative??*/
   padding: 1vw;
 }
-@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700|Roboto+Slab:700");
-@font-face {
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmbGRjRdE.woff2)
-    format("woff2");
-  unicode-range: U+0370-03FF;
-}
-/* latin */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto Slab", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  /*border: 2px solid black;*/
-  margin: 0;
-  border: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-html {
-  background-color: #d3d3d3;
-}
-
-body {
-  background-color: white;
-  display: flex;
+/*
+  Drag'n'drop and image preview for custom ship
+*/
+#tutoDino {
   align-self: center;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 0;
-  max-width: 1240px;
-  margin: auto;
-  box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35);
-}
-
-header h1 {
-  padding: 1vw;
-  padding-top: 4vw;
-  text-align: center;
-  color: white;
-  background-image: linear-gradient(#f4b89b, #dd4e22);
-}
-
-nav {
   justify-content: center;
 }
 
-#hamburger, label /*Hides burger in Desktop version*/ {
-  display: none;
-}
-
-header ul /*Navigation list*/ {
+.droparea {
+  margin: 1rem auto;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
-  flex-wrap: wrap;
-  flex-direction: row;
-  background-color: #464646;
-  padding-left: 5vw; /*Pour faire le carré déguelasse à gauche là*/
-}
-header li /*Removes list's dot*/ {
-  list-style-type: none;
+
+  max-width: 100%;
+  height: 160px;
+  border: 4px dashed grey;
+  border-radius: 15px;
+  padding: 1vw;
 }
 
-header li a /*Make whole block act as clickable link*/ {
-  display: block;
+.droparea i {
+  font-size: 3rem;
+  flex-grow: 0.5;
+  padding-top: 1rem;
+}
+
+.green-border {
+  border-color: green;
+}
+
+.uploadOuter {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+strong {
+  padding: 0 0px;
+  color: #f9c22f;
+}
+.dragBox {
+  width: 250px;
+  height: 100px;
+  position: relative;
   text-align: center;
   font-weight: bold;
-  padding: 1vw;
-  background-color: #464646;
-  text-decoration: none;
-  color: white;
+  line-height: 95px;
+  color: #999;
+  border: 2px dashed #ccc;
+  display: inline-block;
+  transition: transform 0.3s;
 }
-
-header li a:hover /*Highlights list elements when hovered*/ {
-  background-color: #606060;
-}
-
-.active a /*Change colors of the current page's link to indicate what page is currently displayed*/ {
-  background-color: white !important;
-  color: #dd4f25 !important;
-}
-
-main {
-  display: flex;
-  background-color: white;
-  margin: 2vw;
-  border: 0;
-  padding: 0;
-  flex-direction: row;
-}
-
-section {
-  background-color: white;
-  padding-bottom: 1vw;
-}
-
-section article {
-  margin-bottom: 2.5em;
-}
-
-section#articles article:first-child {
-  margin-bottom: 0;
-}
-
-section article ul {
-  margin-left: 2em;
-}
-
-section article header p {
-  margin-bottom: 0;
-}
-
-section article p {
-  margin-bottom: 1em;
-}
-
-section header {
-  padding-bottom: 1.5vw;
-}
-
-section header h2,
-section header h3 {
-  border-bottom: 1px solid #b2b2b2;
-}
-
-section header.first_header h2 {
-  border: none;
-}
-
-section header p {
-  font-style: italic;
-  color: #b2b2b2;
-  text-align: end;
-}
-#articles figure {
+input[type="file"] {
+  position: absolute;
+  height: 100%;
   width: 100%;
-  margin: 1vw;
+  opacity: 0;
+  top: 0;
+  left: 0;
 }
-#articles figcaption.Mockup {
-  width: 60%;
+.draging {
+  transform: scale(1.1);
 }
-h4 {
-  margin-bottom: 1vw;
+#preview {
+  text-align: center;
 }
-.logImg {
-  float: right;
-  width: 30%;
-  margin-right: 1vw;
-}
-.clear {
-  clear: both;
-}
-aside {
-  background-color: transparent;
 
-  width: 60vw;
-  height: max-content;
-  margin-left: 4vw;
+#previewImage {
+  max-width: 20vh;
+  width: 100%;
+}
+
+#dragNdrop {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
+}
+#fileInput {
+  background-color: #101010;
+  width: 50px;
+  height: 50px;
+}
+#fileInputForm {
+  background-color: #101010;
+  width: 50px;
+  height: 50px;
+}
+
+/*
+  Form for custom captain name
+*/
+
+#formContainer {
+  /*background-color: #999;*/
+
+  align-self: center;
+  align-items: center;
+}
+#form {
+  background-color: #777;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  align-self: center;
+
+  border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
 }
-
-aside h3 {
-  padding-bottom: 1vw;
+#form label {
+  /*background-color: blue;*/
+  font-family: "Montserrat";
+  font-size: 16px;
   color: white;
-  background-color: #dd4e22;
-  padding: 1vw;
-}
 
-aside ul {
-  padding: 1vw;
-  padding-left: 1.5vw;
-  list-style: none;
-}
-aside li {
-  padding: 0.6vw;
-}
-
-a {
-  text-decoration: none;
-  color: #dd4f25;
-}
-
-#GameContainer {
-  width: 100%;
   display: flex;
   justify-content: center;
-  justify-items: center;
-  align-items: center;
-  flex-direction: column;
+
+  max-width: fit-content;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-#gameCanvas {
-  display: flex;
-  border: 2px solid black;
-  border-radius: 2%;
+#submit {
+  color: white;
+  background-color: #303030;
+  margin-top: 20px;
 }
 
-#startButton {
-  background-color: green;
-  width: auto;
-  padding: 1em;
-  margin: 1em;
+#submit:hover {
   cursor: pointer;
+  background-color: #404040;
 }
-footer {
+
+.form {
   display: flex;
-  justify-content: center;
-  background-color: #464646;
-  margin-top: auto; /*Keeps footer at the bottom*/
-  /*Might be better to use the seen in class method but that means Header and Footer would have an absolute size instead of relative??*/
-  padding: 1vw;
+  -ms-flex-align: center;
+  padding: 10px;
+  min-width: fit-content;
+  max-width: fit-content;
+  margin: auto;
+  align-self: center;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.form-control label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(100, 100, 100, 1);
+}
+
+.form-control small {
+  margin: -18px;
+  font-size: 13px;
+  font-weight: 300;
+  visibility: hidden;
+}
+
+.form-control input {
+  margin-top: 6px;
+  background-color: rgba(241, 241, 241, 1);
+  display: block;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  padding: 12px;
+  width: 300px;
+}
+.form-control input::placeholder {
+  color: #777;
+  font-size: 14px;
+  font-weight: 200;
+}
+.form-control i {
+  position: relative;
+  top: -35px;
+  left: 295px;
+}
+#dragNdrop h3 {
+  padding: 4px;
+  margin: 4px;
+}
+
+/*
+  Weather App
+*/
+#weather {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
+}
+#weather h3 {
+  padding: 4px;
+  margin: 4px;
+}
+
+#weatherButton {
+  align-self: center;
+  color: white;
+  background-color: #303030;
+  margin-top: 20px;
+  border-radius: 7px;
+  font-size: 14px;
+  padding: 12px;
+  width: 300px;
+}
+
+#weatherButton:hover {
+  cursor: pointer;
+  background-color: #101010;
+}
+
+#weather #demo {
+  color: white;
+  background-color: #777;
+  margin-top: 20px;
+  border-radius: 7px;
+  font-size: 14px;
+  padding: 12px;
+  width: 300px;
 }
