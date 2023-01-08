@@ -11,35 +11,19 @@ class Weather extends React.Component{
         this.canvasRef = React.createRef();
         this.dateLabels = [];
         this.temperatureData = [];
-        this.chart = null;
+        //this.chart = null;
 
-        const canvas = this.canvasRef.current;
-        const ctx = canvas.getContext("2d");
-        //ctx.clearRect(0, 0, canvas.width, canvas.height);
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-              labels: this.dateLabels,
-              datasets: [{
-                label: 'Temperatures in ºC',
-                data: this.temperatureData,
-                borderWidth: 1
-              }]
-            },
-            options: {
-              scales: {
-                y: {
-                  beginAtZero: true
-                }
-              }
-            }
-          });
     }
-/*
+
+
+
     componentDidMount(){
+        /*
         const canvas = this.canvasRef.current;
         const ctx = canvas.getContext("2d");
+        ctx.fillText("sucepute", 0, 0);
         //ctx.clearRect(0, 0, canvas.width, canvas.height);
+        /*
         new Chart(ctx, {
             type: 'line',
             data: {
@@ -58,9 +42,10 @@ class Weather extends React.Component{
               }
             }
           });
+          */
           //this.updateChart(this.canvasRef.current);
     }
-    */
+    
     
     render(){
         return (
@@ -77,7 +62,7 @@ class Weather extends React.Component{
                     <a href="https://opencagedata.com/">opencagedata.com</a> to find a corresponding address and{' '}
                     <a href="https://api.open-meteo.com/">api.open-meteo.com</a> to get the temperature prediction for the next seven days.
                 </p>
-                <button onClick={this.getLocation()} id="weatherButton">
+                <button onClick={this.getLocation} id="weatherButton">
                     Try It
                 </button>
                 <p id="demo"></p>
@@ -99,13 +84,16 @@ class Weather extends React.Component{
             x.innerHTML = "Geolocalisation is not supported by this browser.";
         }
     }
+
     showPosition(position) {
         let x = document.getElementById("demo");
         const api_key = '71abb4f156534c03a9237ae7eee73100';
         let latitude = position.coords.latitude;
         let longitude = position.coords.longitude;
+        console.log(latitude);
 
-        this.getWeatherData(latitude, longitude);
+        //this.getWeatherData(latitude, longitude);
+
         let api_url = 'https://api.opencagedata.com/geocode/v1/json';
         let request_url = api_url
             + '?'
@@ -143,7 +131,6 @@ class Weather extends React.Component{
     }
 
     
-
     getWeatherData(latitude, longitude){
         
         let searchUrl = 'https://api.open-meteo.com/v1/forecast?latitude='
