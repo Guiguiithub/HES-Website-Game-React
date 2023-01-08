@@ -7,6 +7,7 @@ import Mockup from './Pages/Mockup';
 import Flow from './Pages/Flow';
 import Logbook from './Pages/Logbook';
 import Game from './Pages/game';
+import Weather from './Pages/weather';
 
 import {
     BrowserRouter as Router,
@@ -47,6 +48,9 @@ export default function PageAndling() {
                         <Link to="/logbook">Logbook</Link>
                     </li>
                     <li>
+                        <Link to="/weather"></Link>
+                    </li>
+                    <li>
                         <Link to="/game">NSE</Link>
                     </li>
                 </ul>
@@ -64,6 +68,9 @@ export default function PageAndling() {
                 </Routes>
                 <Routes>
                     <Route path="/logbook" element={<Logbook/>}></Route>
+                </Routes>
+                <Routes>
+                    <Route path='/weather' element={<Weather/>}></Route>
                 </Routes>
             <footer>
                 <img id="logo" src="logo.png"></img>
