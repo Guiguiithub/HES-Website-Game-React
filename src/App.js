@@ -6,7 +6,6 @@ import Description from "./Pages/Description";
 import Mockup from './Pages/Mockup';
 import Flow from './Pages/Flow';
 import Logbook from './Pages/Logbook';
-import Game from './Pages/game';
 import Weather from './Pages/weather';
 
 import {
@@ -15,12 +14,6 @@ import {
     Route,
     Link
 } from "react-router-dom" ;
-
-const loadPlayer = async({imageID},{ signal }) => {
-    const res = await fetch(`https://dev-nsegame.pantheonsite.io/wp-json/wp/v2/media/${imageID}`, { signal })
-    if (!res.ok) throw new Error(res.statusText)
-    return res.json()
-}
 
 export default function PageAndling() {
     
