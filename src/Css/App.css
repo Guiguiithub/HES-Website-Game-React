@@ -86,7 +86,7 @@ header ul /*Navigation list*/ {
   justify-content: start;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: #464646;
+  background-color: #262626;
   padding-left: 5vw; /*Pour faire le carré déguelasse à gauche là*/
 }
 header li /*Removes list's dot*/ {
@@ -98,7 +98,7 @@ header li a /*Make whole block act as clickable link*/ {
   text-align: center;
   font-weight: bold;
   padding: 1vw;
-  background-color: #464646;
+  background-color: #262626;
   text-decoration: none;
   color: white;
 }
@@ -109,7 +109,7 @@ header li a:hover /*Highlights list elements when hovered*/ {
 }
 
 .active a /*Change colors of the current page's link to indicate what page is currently displayed*/ {
-  background-color: #404040 !important;
+  background-color: #464646 !important;
 }
 
 main {
