@@ -6,7 +6,7 @@ import Description from "./Pages/Description";
 import Mockup from './Pages/Mockup';
 import Flow from './Pages/Flow';
 import Logbook from './Pages/Logbook';
-import Weather from './Pages/weather';
+import Skill from './Pages/Skill';
 
 import {
     BrowserRouter as Router,
@@ -18,8 +18,7 @@ import {
 export default function PageAndling() {
     
   return (
-    <html>
-
+    <div>
     <Router>
         <div>
         <header>
@@ -41,10 +40,10 @@ export default function PageAndling() {
                         <Link to="/logbook">Logbook</Link>
                     </li>
                     <li>
-                        <Link to="/weather"></Link>
+                        <Link to="/skill">Skills</Link>
                     </li>
                     <li>
-                        <Link to="/game">NSE</Link>
+                        <Link to="/game" onClick={()=> window.open('https://nse-game.ch/', '_blank')}>NSE</Link>
                     </li>
                 </ul>
                 <hr />
@@ -63,13 +62,13 @@ export default function PageAndling() {
                     <Route path="/logbook" element={<Logbook/>}></Route>
                 </Routes>
                 <Routes>
-                    <Route path='/weather' element={<Weather/>}></Route>
+                    <Route path='/skill' element={<Skill/>}></Route>
                 </Routes>
             <footer>
                 <img id="logo" src="logo.png"></img>
             </footer>
         </div>
     </Router>
-    </html>
+    </div>
   )
 }
