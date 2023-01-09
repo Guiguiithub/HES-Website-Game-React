@@ -189,13 +189,28 @@ section header p {
   color: #777;
   text-align: end;
 }
-#articles img {
-  width: 100%;
+#articles figure img {
+  width: 70%; /*100%*/
+  height: auto;
   margin: 1vw;
 }
-#articles img.Mockup {
+#articles figure.Mockup img {
+  width: 100%;
+}
+#articles figure img {
+  width: 100%;
+  height: auto;
+  margin: 1vw;
+}
+
+.skillImg figure {
+  width: 70%;
+}
+
+.skillImg img {
   width: 60%;
 }
+
 h4 {
   color: white;
   margin-bottom: 1vw;
