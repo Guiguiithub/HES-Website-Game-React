@@ -43,7 +43,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: #404040;
   display: flex;
   align-self: center;
   flex-direction: column;
